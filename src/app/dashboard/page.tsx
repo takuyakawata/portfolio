@@ -8,9 +8,9 @@ export default function HomePage() {
     return (
         <main className="space-y-12">
             {/* 1. ヒーロー */}
-            <section>
+            {/*<section>*/}
                 <Hero />
-            </section>
+            {/*</section>*/}
 
             {/* 2. クイックナビ */}
             <section>
