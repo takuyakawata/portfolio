@@ -8,55 +8,68 @@ export default function AboutPage() {
             <Card>
                 <CardHeader>
                     <CardTitle>About Me</CardTitle>
-                    <CardDescription>元小学校教員→バックエンドエンジニアの歩み</CardDescription>
+                    <CardDescription>profile index</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-6">
-                    {/* 教員時代 */}
+                    {/* 自己紹介セクション */}
                     <ExperienceSection
-                        title="Teacher"
+                        title="Self Introduction"
                         descriptions={[
-                            "小学校教員として 5 年間勤務。教育現場での経験を通じて、子どもたちの成長を支えることに情熱を注ぎました。",
-                            "特に、体育や ICT活用に力を入れ、子どもたちに新しい学びの機会を提供しました。",
-                            "教員としての経験は、チームワークやコミュニケーション能力を高める貴重な機会となりました。",
-                            "体育教育推進担当として、運動会や体育祭の企画・運営を担当し、子どもたちの成長を見守りました。",
-                            "ICT活用推進担当として、プログラミング教育やデジタル教材の導入を行い、子どもたちの学びをサポートしました。",
+                            "私は、PHPとKotlinを中心にバックエンド開発を行っているエンジニアです。",
+                            "新しい技術やトレンドに常に興味を持ち、自己成長を追求しています。チームでの協力やコミュニケーションを大切にし、プロジェクトの成功に貢献することを目指しています。",
                         ]}
                         skills={[
-                            '教育',
-                            'チームワーク',
-                            'コミュニケーション',
-                            'ICT活用',
-                            '体育教育',
-                        ]}
-                    />
-
-                    {/* エンジニア時代 */}
-                    <ExperienceSection
-                        title="Engineer"
-                        descriptions={[
-                            "業務では Laravel を用いた API 開発や Kotlin/Spring Boot によるマイクロサービス設計を経験。",
-                            "Next.js/TypeScript でのサーバーサイドレンダリング対応アプリ構築にも携わりました。",
-                            "CI/CD パイプライン構築、Docker コンテナ化、自動テスト導入で品質向上を実現。",
-                            "DDD や TDD の手法を取り入れ、開発プロセスの効率化と品質向上に努めました。",
-                        ]}
-                        skills={[
-                            'Laravel',
                             'PHP',
                             'Kotlin',
-                            'Spring Boot',
-                            'Next.js',
-                            'TypeScript',
-                            'CI/CD',
-                            'Docker',
-                            '自動テスト',
-                            'マイクロサービス',
-                            'サーバーサイドレンダリング',
-                            'API開発',
-                            'DDD',
-                            'TDD',
+                            'API設計',
+                        ]}
+                    />
+                    {/* 趣味セクション */}
+                    <ExperienceSection
+                        title="Hobbies & Interests"
+                        descriptions={[
+                            "ゴルフを趣味として楽しんでいます。自然の中でリフレッシュしながら、スコアの向上に取り組んでいます。",
+                            "読書が好きで、特に技術書や自己啓発本を中心に読んでいます。",
+                            "旅行も好きで、新しい場所や文化に触れることで視野を広げています。",
+                        ]}
+                        skills={[
+                            'ゴルフ',
+                            '読書',
+                            '旅行',
+                            '料理',
+                            '温泉',
+                        ]}
+                    />
+                    {/* 出身地セクション */}
+                    <ExperienceSection
+                        title="Hometown"
+                        descriptions={[
+                            "出身地は山口です。生まれも育ちも山口です。",
+                        ]}
+                        skills={[
+                            '山口',
+                            '温泉',
+                            '自然',
+                        ]}
+                    />
+                    {/* その他 */}
+                    <ExperienceSection
+                        title="Hometown"
+                        descriptions={[
+                            "大学時代は、フットサルで活動していました。全国大会も経験させていただきました！チームワークやコミュニケーション能力を磨くことができました。",
+                        ]}
+                        skills={[
+                            'フットサル',
+                            'チームワーク',
+                            'コミュニケーション',
                         ]}
                     />
                 </CardContent>
+                {/*おすすめの本の紹介　リンクページ*/}
+                <CardHeader>
+                    <CardTitle>Books I Recommend</CardTitle>
+                    <CardDescription>おすすめの本</CardDescription>
+                </CardHeader>
             </Card>
         </section>
     )
