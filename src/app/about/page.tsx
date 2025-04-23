@@ -1,6 +1,5 @@
 // app/about/page.tsx
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/shadcn/ui/card'
-import { Badge } from '@/components/shadcn/ui/badge'
 import { ExperienceSection } from '@/components/shadcn/experience-section'
 
 export default function AboutPage() {
