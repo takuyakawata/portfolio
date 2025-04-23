@@ -18,14 +18,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49619998-817d-41d9-8843-d4978ea218b8" name="変更" comment="Add portfolio, career, contact, profile, and skills pages&#10;&#10;Implemented new pages to showcase portfolio projects, career history, contact form, personal profile, and technical skills. The pages utilize reusable UI components and include detailed sections for better readability and user engagement.">
-      <change afterPath="$PROJECT_DIR$/src/components/header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/dashboard/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/hero.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/hero.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="49619998-817d-41d9-8843-d4978ea218b8" name="変更" comment="Add Header component and enhance portfolio structure&#10;&#10;Introduced a reusable Header component to improve navigation across the application. Updated the layout and added structured guidelines for better organization. Minor content adjustments and UI refinements were made to enhance user experience." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -101,29 +94,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/kawatatakuya/app/portfolio&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;プロジェクト&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;ml.llm.LLMProjectConfigurable&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Applications/IntelliJ IDEA.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "git-widget-placeholder": "dashboard",
+    "go.import.settings.migrated": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/Users/kawatatakuya/app/portfolio",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Run",
+    "project.structure.last.edited": "プロジェクト",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "advanced.settings",
+    "ts.external.directory.path": "/Applications/IntelliJ IDEA.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/lib/shadcn" />
@@ -203,6 +197,7 @@
       <workItem from="1745364315353" duration="6271000" />
       <workItem from="1745409497094" duration="204000" />
       <workItem from="1745409704830" duration="535000" />
+      <workItem from="1745410283924" duration="539000" />
     </task>
     <task id="LOCAL-00001" summary="Add portfolio website structure with navigation, pages, and components">
       <option name="closed" value="true" />
@@ -308,7 +303,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745368491389</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Add Header component and enhance portfolio structure&#10;&#10;Introduced a reusable Header component to improve navigation across the application. Updated the layout and added structured guidelines for better organization. Minor content adjustments and UI refinements were made to enhance user experience.">
+      <option name="closed" value="true" />
+      <created>1745410655812</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1745410655812</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,7 +331,8 @@
     <MESSAGE value="Refactor: update import path for utils in button.tsx and add ExperienceSection component" />
     <MESSAGE value="Refactor: create AboutPage and HomePage components with navigation and experience sections" />
     <MESSAGE value="Add portfolio, career, contact, profile, and skills pages&#10;&#10;Implemented new pages to showcase portfolio projects, career history, contact form, personal profile, and technical skills. The pages utilize reusable UI components and include detailed sections for better readability and user engagement." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add portfolio, career, contact, profile, and skills pages&#10;&#10;Implemented new pages to showcase portfolio projects, career history, contact form, personal profile, and technical skills. The pages utilize reusable UI components and include detailed sections for better readability and user engagement." />
+    <MESSAGE value="Add Header component and enhance portfolio structure&#10;&#10;Introduced a reusable Header component to improve navigation across the application. Updated the layout and added structured guidelines for better organization. Minor content adjustments and UI refinements were made to enhance user experience." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Header component and enhance portfolio structure&#10;&#10;Introduced a reusable Header component to improve navigation across the application. Updated the layout and added structured guidelines for better organization. Minor content adjustments and UI refinements were made to enhance user experience." />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
