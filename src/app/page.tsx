@@ -5,6 +5,7 @@ import { EngineerDaysCard } from "@/app/_componets/EngineerDaysCard";
 import { Card, CardContent, CardHeader } from "@/components/shadcn/ui/card";
 import CommitChart from "@/components/commitChart";
 import { useEffect, useState } from "react";
+import { format, subDays } from "date-fns";
 
 const START_DATE = new Date("2023-04-01");
 
@@ -14,50 +15,58 @@ async function fetchAllContributions() {
     const startDate = new Date();
     startDate.setFullYear(endDate.getFullYear() - 1);
 
+    const to = new Date().toISOString();
+    const from = new Date(Date.now() - 365 * 24 * 60 * 60 * 1000).toISOString();
+
     const query = `
-    query {
-      viewer {
-        contributionsCollection(from: "${startDate.toISOString()}", to: "${endDate.toISOString()}") {
-          contributionCalendar {
-            weeks {
-              contributionDays {
-                date
-                contributionCount
+      query Contributions($from: DateTime!, $to: DateTime!) {
+        viewer {
+          contributionsCollection(from: $from, to: $to) {
+            contributionCalendar {
+              totalContributions
+              weeks {
+                contributionDays {
+                  date
+                  contributionCount
+                }
               }
             }
           }
         }
       }
-    }
-  `;
+    `;
+    const variables = { from, to };
+
     const res = await fetch("https://api.github.com/graphql", {
         method: "POST",
         headers: {
-            Authorization: `bearer ${process.env.GITHUB_TOKEN}`,
+            Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
             "Content-Type": "application/json",
         },
-        body: JSON.stringify({ query }),
+        body: JSON.stringify({ query, variables }),
     });
-    const json = await res.json();
-    if (!json.data) {
-        console.error("Failed to fetch data from GitHub API", json);
-        return null;
+    console.log(process.env.GITHUB_TOKEN)
+
+    if (!res.ok) {
+        const text = await res.text();
+        console.error("GitHub API error:", res.status, text);
+        throw new Error(`GitHub API returned ${res.status}`);
     }
+
+    const json = await res.json();
     if (json.errors) {
         console.error("GraphQL errors:", json.errors);
-        return null;
+        throw new Error("GitHub GraphQL errors");
     }
+
+    // 日次データを返す
     return json.data.viewer.contributionsCollection.contributionCalendar.weeks
-        .flatMap((week: any) => week.contributionDays)
-        .map((day: any) => ({
-            date: day.date,
-            count: day.contributionCount,
-        }));
+        .flatMap((w: any) => w.contributionDays)
+        .map((d: any) => ({ date: d.date, count: d.contributionCount }));
 }
 
 export default function Home() {
-    const [commitData, setCommitData] = useState<{ date: string; count: number }[] | null>(null);
-    const [loading, setLoading] = useState(true);
+    const contributions =  fetchAllContributions();
 
     const now = new Date();
     const days = differenceInDays(now, START_DATE) + 1;
@@ -68,39 +77,16 @@ export default function Home() {
         weekday: "long",
     });
 
-    useEffect(() => {
-        async function loadData() {
-            try {
-                const data = await fetchAllContributions();
-                setCommitData(data);
-            } catch (error) {
-                console.error("Error fetching commit data:", error);
-            } finally {
-                setLoading(false);
-            }
-        }
-
-        loadData();
-    }, []);
-
-    if (loading) {
-        return <p>Loading commit data...</p>;
-    }
-
     return (
-        <div className="min-h-screen flex items-center justify-center bg-background p-8">
+        <div className="min-h-screen flex flex-col items-center justify-center bg-background p-8 space-y-8">
             <EngineerDaysCard todayStr={todayStr} days={days} />
 
-            <Card>
+            <Card className="w-full max-w-3xl">
                 <CardHeader>
                     <h2 className="text-xl font-bold">Commit Activity (Last 365 days)</h2>
                 </CardHeader>
                 <CardContent>
-                    {commitData ? (
-                        <CommitChart data={commitData} />
-                    ) : (
-                        <p>Failed to load commit data</p>
-                    )}
+                    <CommitChart data={contributions}>
                 </CardContent>
             </Card>
         </div>
