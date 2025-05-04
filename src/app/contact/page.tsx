@@ -72,15 +72,15 @@ export default function ContactPage() {
                     <div className="mt-8">
                         <h3 className="text-lg font-semibold mb-2">SNS</h3>
                         <div className="flex space-x-4">
-                            <a href="https://github.com/yourname" className="text-blue-600 hover:underline dark:text-blue-400">
+                            <a href="https://github.com/kawatatakuya" className="text-blue-600 hover:underline dark:text-blue-400">
                                 GitHub
                             </a>
-                            <a href="https://twitter.com/yourname" className="text-blue-600 hover:underline dark:text-blue-400">
-                                Twitter
+                            <a href="https://x.com/ta_bon22" className="text-blue-600 hover:underline dark:text-blue-400">
+                                X(旧:twitter)
                             </a>
-                            <a href="https://linkedin.com/in/yourname" className="text-blue-600 hover:underline dark:text-blue-400">
-                                LinkedIn
-                            </a>
+                            {/*<a href="https://linkedin.com/in/yourname" className="text-blue-600 hover:underline dark:text-blue-400">*/}
+                            {/*    LinkedIn*/}
+                            {/*</a>*/}
                         </div>
                     </div>
                 </CardContent>
