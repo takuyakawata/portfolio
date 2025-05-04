@@ -86,7 +86,7 @@ export default function Home() {
                     <h2 className="text-xl font-bold">Commit Activity (Last 365 days)</h2>
                 </CardHeader>
                 <CardContent>
-                    <CommitChart data={contributions}>
+                    <CommitChart data={contributions} />
                 </CardContent>
             </Card>
         </div>

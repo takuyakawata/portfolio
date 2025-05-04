@@ -18,7 +18,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49619998-817d-41d9-8843-d4978ea218b8" name="変更" comment="Add Header component and enhance portfolio structure&#10;&#10;Introduced a reusable Header component to improve navigation across the application. Updated the layout and added structured guidelines for better organization. Minor content adjustments and UI refinements were made to enhance user experience." />
+    <list default="true" id="49619998-817d-41d9-8843-d4978ea218b8" name="変更" comment="Update package-lock.json and refactor commit data fetching for improved error handling and performance">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/contact/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/contact/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,11 +36,12 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
+  <component name="GOROOT" url="file:///usr/local/go" />
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -58,16 +65,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="feature-page" />
-                    <option name="lastUsedInstant" value="1745310467" />
+                    <option name="branchName" value="feture/github-chart" />
+                    <option name="lastUsedInstant" value="1745414035" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="main" />
                     <option name="lastUsedInstant" value="1745310086" />
-                  </RecentBranch>
-                  <RecentBranch>
-                    <option name="branchName" value="dev" />
-                    <option name="lastUsedInstant" value="1745309665" />
                   </RecentBranch>
                 </list>
               </option>
@@ -100,8 +103,9 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.go.formatter.settings.were.checked": "true",
     "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "git-widget-placeholder": "dashboard",
+    "git-widget-placeholder": "feture/github-chart",
     "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
     "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "/Users/kawatatakuya/app/portfolio",
     "node.js.detected.package.eslint": "true",
@@ -172,6 +176,7 @@
       <list>
         <item itemvalue="npm.dev" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
   </component>
@@ -198,6 +203,8 @@
       <workItem from="1745409497094" duration="204000" />
       <workItem from="1745409704830" duration="535000" />
       <workItem from="1745410283924" duration="539000" />
+      <workItem from="1745487408422" duration="18000" />
+      <workItem from="1745621293805" duration="803000" />
     </task>
     <task id="LOCAL-00001" summary="Add portfolio website structure with navigation, pages, and components">
       <option name="closed" value="true" />
@@ -311,7 +318,23 @@
       <option name="project" value="LOCAL" />
       <updated>1745410655812</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Add CommitChart component and fetch commit data for enhanced contribution visualization">
+      <option name="closed" value="true" />
+      <created>1745447902460</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1745447902460</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Update package-lock.json and refactor commit data fetching for improved error handling and performance">
+      <option name="closed" value="true" />
+      <created>1745458394611</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1745458394611</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -332,29 +355,12 @@
     <MESSAGE value="Refactor: create AboutPage and HomePage components with navigation and experience sections" />
     <MESSAGE value="Add portfolio, career, contact, profile, and skills pages&#10;&#10;Implemented new pages to showcase portfolio projects, career history, contact form, personal profile, and technical skills. The pages utilize reusable UI components and include detailed sections for better readability and user engagement." />
     <MESSAGE value="Add Header component and enhance portfolio structure&#10;&#10;Introduced a reusable Header component to improve navigation across the application. Updated the layout and added structured guidelines for better organization. Minor content adjustments and UI refinements were made to enhance user experience." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Header component and enhance portfolio structure&#10;&#10;Introduced a reusable Header component to improve navigation across the application. Updated the layout and added structured guidelines for better organization. Minor content adjustments and UI refinements were made to enhance user experience." />
+    <MESSAGE value="Add CommitChart component and fetch commit data for enhanced contribution visualization" />
+    <MESSAGE value="Update package-lock.json and refactor commit data fetching for improved error handling and performance" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update package-lock.json and refactor commit data fetching for improved error handling and performance" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/app/portfolio/[slug]/page.tsx</url>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/app/contact/page.tsx</url>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/shadcn/ui/calendar.tsx</url>
-          <line>2</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
