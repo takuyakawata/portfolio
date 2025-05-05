@@ -1,5 +1,3 @@
-"use client";
-
 import { differenceInDays } from "date-fns";
 import { EngineerDaysCard } from "@/app/_componets/EngineerDaysCard";
 import { Card, CardContent, CardHeader } from "@/components/shadcn/ui/card";
