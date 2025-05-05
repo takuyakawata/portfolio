@@ -4,12 +4,24 @@ import { differenceInDays } from "date-fns";
 import { EngineerDaysCard } from "@/app/_componets/EngineerDaysCard";
 import { Card, CardContent, CardHeader } from "@/components/shadcn/ui/card";
 import CommitChart from "@/components/commitChart";
-import { useEffect, useState } from "react";
-import { format, subDays } from "date-fns";
+
+interface CommitDataPoint {
+    date: string;
+    count: number;
+}
 
 const START_DATE = new Date("2023-04-01");
 
-async function fetchAllContributions() {
+interface ContributionDay {
+    date: string;
+    contributionCount: number;
+}
+
+interface Week {
+    contributionDays: ContributionDay[];
+}
+
+async function fetchAllContributions(): Promise<CommitDataPoint[]> {
     // Calculate dates for the past year
     const endDate = new Date();
     const startDate = new Date();
@@ -59,14 +71,16 @@ async function fetchAllContributions() {
         throw new Error("GitHub GraphQL errors");
     }
 
-    // 日次データを返す
     return json.data.viewer.contributionsCollection.contributionCalendar.weeks
-        .flatMap((w: any) => w.contributionDays)
-        .map((d: any) => ({ date: d.date, count: d.contributionCount }));
+        .flatMap((w: Week) => w.contributionDays)
+        .map((d: ContributionDay) => ({
+            date: d.date,
+            count: d.contributionCount
+        }));
 }
 
-export default function Home() {
-    const contributions =  fetchAllContributions();
+export default async function Home() {
+    const contributions: CommitDataPoint[] = await fetchAllContributions();
 
     const now = new Date();
     const days = differenceInDays(now, START_DATE) + 1;
