@@ -13,7 +13,7 @@ export default function SkillsPage() {
             <Card>
                 <CardHeader>
                     <CardTitle>Skills</CardTitle>
-                    <CardDescription>技術スタック＆スキル（自己評価）</CardDescription>
+                    <CardDescription>技術スタック＆スキル</CardDescription>
                 </CardHeader>
                 <CardContent>
                     <Section className="flex flex-col md:flex-row gap-8">
