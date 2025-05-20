@@ -1,6 +1,5 @@
 // app/contact/page.tsx
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/shadcn/ui/card'
-import { Button } from '@/components/shadcn/ui/button'
 
 export default function ContactPage() {
     return (
@@ -77,9 +76,6 @@ export default function ContactPage() {
                             <a href="https://x.com/ta_bon22" className="text-blue-600 hover:underline dark:text-blue-400">
                                 X(旧:twitter)
                             </a>
-                            {/*<a href="https://linkedin.com/in/yourname" className="text-blue-600 hover:underline dark:text-blue-400">*/}
-                            {/*    LinkedIn*/}
-                            {/*</a>*/}
                         </div>
                     </div>
                 </CardContent>
