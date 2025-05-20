@@ -13,11 +13,10 @@ export default function ContactPage() {
                 <CardContent className="space-y-6">
                     <p className="mb-4">
                         お仕事のご依頼やご質問など、お気軽にお問い合わせください。
-                        以下のフォームからメッセージを送信いただくか、SNSでも連絡可能です。
                     </p>
 
                     {/* Contact Form */}
-                    <form className="space-y-4">
+                    {/* <form className="space-y-4">
                         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                             <div className="space-y-2">
                                 <label htmlFor="name" className="text-sm font-medium">
@@ -66,7 +65,7 @@ export default function ContactPage() {
                         <Button type="submit" className="w-full sm:w-auto">
                             送信する
                         </Button>
-                    </form>
+                    </form> */}
 
                     {/* Social Links */}
                     <div className="mt-8">

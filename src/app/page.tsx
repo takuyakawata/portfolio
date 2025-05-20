@@ -1,7 +1,7 @@
 import { differenceInDays } from "date-fns";
 import { EngineerDaysCard } from "@/app/_componets/EngineerDaysCard";
 import { Card, CardContent, CardHeader } from "@/components/shadcn/ui/card";
-import CommitChart from "@/components/commitChart";
+import CommitChart from "@/components/commit-chart";
 
 interface CommitDataPoint {
     date: string;
