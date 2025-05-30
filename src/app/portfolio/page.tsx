@@ -71,9 +71,9 @@ export default function PortfolioPage() {
                                 ))}
                             </div>
                             <Button asChild size="sm">
-                                <Link href="https://github.com/takuyakawata/spot-teacher-sample">GitHubを見る</Link>
+                                <Link href="https://github.com/takuyakawata/go-sample">GitHubを見る</Link>
                             </Button>
-                            <Link href="">quita</Link>
+                            <Link href=""></Link>
                         </CardContent>
                     </Card>
 
@@ -94,7 +94,7 @@ export default function PortfolioPage() {
                                 ))}
                             </div>
                             <Button asChild size="sm">
-                                <Link href="https://github.com/takuyakawata/spot-teacher-sample">GitHubを見る</Link>
+                                <Link href="https://github.com/takuyakawata/portfolio">GitHubを見る</Link>
                             </Button>
                         </CardContent>
                     </Card>
@@ -115,7 +115,7 @@ export default function PortfolioPage() {
                                 ))}
                             </div>
                             <Button asChild size="sm">
-                                <Link href="https://github.com/takuyakawata/spot-teacher-sample">GitHubを見る</Link>
+                                <Link href="https://github.com/takuyakawata/Qiita-norishio-times">GitHubを見る</Link>
                             </Button>
                         </CardContent>
                     </Card>
